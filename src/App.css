@@ -1,0 +1,12 @@
+.App {
+  font-size: 16px;
+  line-height: 1.5;
+}
+header h1 {
+  font-size: 40px;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
