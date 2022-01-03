@@ -32,6 +32,11 @@ function App() {
       [name]:value
     })
   }
+  //userList 삭제 함수
+  function onRemove(id){
+    setUsers(users.filter(user => user.id !== id));
+    console.log(id);
+  }
   //등록버튼 클릭 시 실행되는 함수
   //user 객체를 생성한 뒤 users를 update
   function onCreate(){
@@ -53,7 +58,7 @@ function App() {
     { id:4, username:"정우성",age:34 },
   ]);
   const nextId = useRef(5);
-  console.log(nextId);
+  // console.log(nextId);
   // let contents = [ //자바스크립트 구문
   //   {id:1, title:'react'},
   //   {id:2, title:'vue'},
@@ -63,7 +68,7 @@ function App() {
     <div className="App">
       <CreateUser onChange={onChange} username={username} age={age} onCreate={onCreate}></CreateUser>
       {/* UserList에 onRemove추가하기 */}
-      <UserList users={users}></UserList>
+      <UserList users={users} onRemove={onRemove}></UserList>
       {/* <DoubleInput></DoubleInput> */}
       {/* <TripleInput></TripleInput>
       
